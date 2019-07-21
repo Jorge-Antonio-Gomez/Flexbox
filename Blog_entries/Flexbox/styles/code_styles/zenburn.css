@@ -8,9 +8,16 @@ based on dark.css by Ivan Sagalaev
 .hljs {
   display: block;
   overflow-x: auto;
-  padding: 0.5em;
+  padding: 1.2em 0em 1.2em 0.5em;
   background: #3f3f3f;
   color: #dcdcdc;
+
+}
+
+@media screen and (max-width: 480px){
+  .hljs {
+    font-size: 12px;
+  }
 }
 
 .hljs-keyword,

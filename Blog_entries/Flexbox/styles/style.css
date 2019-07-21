@@ -249,13 +249,17 @@ code {
     line-height: 140%;
         width: 100%;
 }
+
+.min_code {
+    margin: 0px;
+}
+
 /*-------------------------------Contenedores------------------------------*/
 
 .code_container {
     margin-bottom: 15px;
     display: flex;
     
-    height: 114px;
     width: 90%;
     display: flex;
 
@@ -287,10 +291,6 @@ code {
 .left_css {
     /* background-color: #5C7598; */
     background-color: #28A8DF;
-}
-
-#min_left_css {
-    height: 129px;
 }
 
 .right_code {
@@ -529,7 +529,7 @@ code {
 }
 
 #hijo_sc_wrap_width {
-    width: 54px;
+    width: 20%;
 }
 
 #padre_fd_row {
@@ -692,8 +692,8 @@ footer {
         padding: 50px 0px 20px 0px;
     }
 
-    .title_code_container_default {
-
+    .title_code_container_default, .title_code_container {
+        font-size: 120%;
     }
 
     .propiety, #propiety_padre {
@@ -705,10 +705,17 @@ footer {
     .container_code_html,
     .container_code_javascript {
         margin: 20px 0px 20px 0px;
+        font-size: 30px;
     }
 
     .function_container {
+        margin: 0 0 0 0;
+        width: 100%;
+    }
 
+    .min_code {
+        margin-left: 10px;
+        font-size: 1em;
     }
 
 }

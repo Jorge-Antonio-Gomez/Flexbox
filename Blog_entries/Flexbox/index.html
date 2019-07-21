@@ -51,12 +51,11 @@
                     <h3 class="h3_main">¿Qué es y cómo funciona <b>Flexbox?</b></h3>
                     <p>Flexbox es una forma o comando utilizado en <b>CSS</b> para ordenar o poner en cierta disposición los elementos de una página web. Siendo el sucesor de comandos como <a class="text_code">float</a>.</p>
                     <p></p>Más adelante vamos a ver los comandos más importantes utilizados para Flexbox. Primero que nada debemos saber que para utilizar este comando necesitamos de un <b>objeto padre</b>, al que le daremos la propiedad de <a class="text_code">display: flex;</a> así como <b>objetos hijos</b> los cuales se distribuirán dentro del objeto padre. A continuación podemos ver la estructura básica de un archivo HTML, en el que son visibles los objetos padre e hijos.</p>
-
+                    
                     <span class="container_code_html"> 
-                        <canvas class="left_html left_html_central"></canvas>
+                        <div class="left_html left_html_central"></div>
                         <pre>
-                            <code>
-&lt;html lang="es"&gt;
+<code>&lt;html lang="es"&gt;
     &lt;head&gt;
         &lt;meta charset="UTF-8"&gt;
         &lt;title&gt;Documento&lt;/title&gt;
@@ -69,8 +68,7 @@
             &lt;div class="hijo"&gt;Contenido&lt;/div&gt;
         &lt;/div&gt;
     &lt;/body&gt;
-&lt;/html&gt;
-                            </code>
+&lt;/html&gt;</code>
                         </pre>
                     </span> 
 
@@ -78,7 +76,7 @@
 
                     <div class="propiety" id="propiety_padre">
                         <div class="title_code_container_default">
-				        <canvas class="title_identify_center title_identify_center_big"></canvas>
+				        <div class="title_identify_center title_identify_center_big"></div>
 				        <div class="title_identify_right"><h5><xmp>Padre con propiedades default</xmp></h5></div>
                         </div>
 
@@ -92,10 +90,9 @@
                     </div>
 
                     <span class="container_code_css">
-                        <canvas class="left_css"></canvas>
+                        <div class="left_css"></div>
                         <pre>
-                            <code>
-.padre {
+<code>.padre {
     height: 340px;
     width: 680px;
 
@@ -118,8 +115,7 @@
     <strike>display: flex;</strike>
     <strike>align-items: center;</strike>
     <strike>justify-content: center;</strike>
-}
-                            </code>
+}</code>
                         </pre>
                     </span>
 
@@ -128,7 +124,7 @@
                     <div class="propiety" id="propiety_padre">
                             <div class="title_code_container_default" id="title_code_container_padre">
 
-                                    <canvas class="title_identify_center title_identify_center_big"></canvas>
+                                    <div class="title_identify_center title_identify_center_big"></div>
                                     <div class="title_identify_right"><h5><xmp>display: flexbox;</xmp></h5></div>
                             </div>
         
@@ -154,8 +150,8 @@
                         <div class="propiety">
 
                             <div class="title_code_container_default">
-                                <canvas class="title_identify_left_default"></canvas>
-                                <canvas class="title_identify_center"></canvas>
+                                <div class="title_identify_left_default"></div>
+                                <div class="title_identify_center"></div>
                                 <div class="title_identify_right"><h5><xmp>flex-direction: row;</xmp></h5></div>
                             </div>
 
@@ -168,13 +164,14 @@
                             </div>
 
                             <div class="code_container">
-                                <canvas class="left_css_sub_container"></canvas>
+                                <div class="left_css_sub_container"></div>
                                 <div class="right_code"><span class="code_css_1-4">
-                                    <pre><code
->.padre {
+                                    <pre>
+<code class="min_code">.padre {
     display: flex; 
     flex-direction: row;
-}</pre></code>
+}</code>
+                                    </pre>
                                 </span></div>
                             </div>
 
@@ -183,8 +180,8 @@
                         <div class="propiety">
 
                             <div class="title_code_container">
-                                <canvas class="title_identify_left"></canvas>
-                                <canvas class="title_identify_center"></canvas>
+                                <div class="title_identify_left"></div>
+                                <div class="title_identify_center"></div>
                                 <div class="title_identify_right"><h5><xmp>flex-direction: row-reverse;</xmp></h5></div>
                             </div>
                             
@@ -197,13 +194,14 @@
                             </div>
 
                             <div class="code_container">
-                                <canvas class="left_css_sub_container"></canvas>
+                                <div class="left_css_sub_container"></div>
                                 <div class="right_code"><span class="code_css_1-4">
-                                    <pre><code
->.padre {
+                                    <pre>
+<code class="min_code">.padre {
     display: flex; 
     flex-direction: row-reverse;
-}</pre></code>
+}</code>
+                                    </pre>
                                 </span></div>
                             </div>
     
@@ -212,8 +210,8 @@
                         <div class="propiety">
 
                             <div class="title_code_container">
-                                <canvas class="title_identify_left"></canvas>
-                                <canvas class="title_identify_center"></canvas>
+                                <div class="title_identify_left"></div>
+                                <div class="title_identify_center"></div>
                                 <div class="title_identify_right"><h5><xmp>flex-direction: column;</xmp></h5></div>
                             </div>
 
@@ -226,13 +224,14 @@
                             </div>
 
                             <div class="code_container">
-                                <canvas class="left_css_sub_container"></canvas>
+                                <div class="left_css_sub_container"></div>
                                 <div class="right_code"><span class="code_css_1-4">    
-                                <pre><code
->.padre {
+                                    <pre>
+<code class="min_code">.padre {
     display: flex; 
     flex-direction: column;
-}</pre></code>
+}</code>
+                                    </pre>
                                 </span></div>
                             </div>
 
@@ -241,8 +240,8 @@
                         <div class="propiety">
 
                             <div class="title_code_container">
-                                <canvas class="title_identify_left"></canvas>
-                                <canvas class="title_identify_center"></canvas>
+                                <div class="title_identify_left"></div>
+                                <div class="title_identify_center"></div>
                                 <div class="title_identify_right"><h5><xmp>flex-direction: column-reverse;</xmp></h5></div>
                             </div>
 
@@ -255,13 +254,14 @@
                             </div>
 
                             <div class="code_container">
-                                <canvas class="left_css_sub_container"></canvas>
+                                <div class="left_css_sub_container"></div>
                                 <div class="right_code"><span class="code_css_1-4">
-                                    <pre><code
->.padre {
+                                    <pre>
+<code class="min_code">.padre {
     display: flex; 
     flex-direction: column-reverse;
-}</pre></code>
+}</code>
+                                    </pre>
                                 </span></div>
                             </div>
 
@@ -275,12 +275,13 @@
                     </p>
 
                     <span class="container_code_css">
-                        <canvas class="left_css" id="min_left_css"></canvas>
-                            <pre><code>
-.hijo {
+                        <div class="left_css"></div>
+                        <pre>
+<code>.hijo {
     width: 70px;
     height: 30px;
-}</code></pre>
+}</code>
+                        </pre>
                     </span>
 
                     <p>Hay que recordar que estas son las dimensiones en un objeto padre pequeño, como los que hemos visto arriba. Ahora bien, si dejamos los seis objetos hijos con la propiedad flexbox dentro del padre, por defecto estos se distribuirán a lo largo de una línea, y por lo tanto perderan ancho. A menos que nosotros le digamos a CSS que queremos que respete de forma explicita ese ancho, poniendo los objetos que no caben en una línea en la siguiente.</p>
@@ -290,8 +291,8 @@
                         <div class="propiety">
 
                             <div class="title_code_container_default">
-                                <canvas class="title_identify_left_default"></canvas>
-                                <canvas class="title_identify_center"></canvas>
+                                <div class="title_identify_left_default"></div>
+                                <div class="title_identify_center"></div>
                                 <div class="title_identify_right"><h5><xmp>flex-wrap: nowrap;</xmp></h5></div>
                             </div>
 
@@ -303,20 +304,18 @@
                                         <div class="hijo_sub_container">D</div>
                                         <div class="hijo_sub_container">E</div>
                                         <div class="hijo_sub_container">F</div>
-                                        <div class="hijo_sub_container">G</div>
-                                        <div class="hijo_sub_container">H</div>
-                                        <div class="hijo_sub_container">I</div>
                                 </div>
                             </div>
 
                             <div class="code_container">
-                                <canvas class="left_css_sub_container"></canvas>
+                                <div class="left_css_sub_container"></div>
                                 <div class="right_code"><span class="code_css_1-4">
-                                    <pre><code
->.padre {
+                                    <pre>
+<code class="min_code">.padre {
     display: flex; 
     flex-wrap: nowrap;
-}</pre></code>
+}</code>
+                                    </pre>
                                 </span></div>
                             </div>
 
@@ -325,8 +324,8 @@
                         <div class="propiety">
 
                             <div class="title_code_container">
-                                <canvas class="title_identify_left"></canvas>
-                                <canvas class="title_identify_center"></canvas>
+                                <div class="title_identify_left"></div>
+                                <div class="title_identify_center"></div>
                                 <div class="title_identify_right"><h5><xmp>flex-wrap: wrap;</xmp></h5></div>
                             </div>
 
@@ -338,24 +337,22 @@
                                         <div class="hijo_sub_container" id="hijo_sc_wrap_width">D</div>
                                         <div class="hijo_sub_container" id="hijo_sc_wrap_width">E</div>
                                         <div class="hijo_sub_container" id="hijo_sc_wrap_width">F</div>
-                                        <div class="hijo_sub_container" id="hijo_sc_wrap_width">G</div>
-                                        <div class="hijo_sub_container" id="hijo_sc_wrap_width">H</div>
-                                        <div class="hijo_sub_container" id="hijo_sc_wrap_width">I</div>
                                 </div>
                             </div>
 
                             <div class="code_container" id="double_code_container">
-                                <canvas class="left_css_sub_container"></canvas>
+                                <div class="left_css_sub_container"></div>
                                 <div class="right_code"><span class="code_css_1-4">
-                                    <pre><code
->.padre {
+                                    <pre>
+<code class="min_code">.padre {
     display: flex; 
     flex-wrap: wrap;
 }
 
 .hijo {
     width: 54px;
-}</code></pre>
+}</code>
+                                    </pre>
                                 </span></div>
                             </div>
 
@@ -373,8 +370,8 @@
 
                         <div class="propiety">
                             <div class="title_code_container_default">
-                                <canvas class="title_identify_left_default"></canvas>
-                                <canvas class="title_identify_center"></canvas>
+                                <div class="title_identify_left_default"></div>
+                                <div class="title_identify_center"></div>
                                 <div class="title_identify_right"><h5><xmp>justify-content: flex-start;</xmp></h5></div>
                             </div>
 
@@ -387,21 +384,22 @@
                             </div>
 
                             <div class="code_container">
-                                <canvas class="left_css_sub_container"></canvas>
+                                <div class="left_css_sub_container"></div>
                                 <div class="right_code"><span class="code_css_1-4">    
-                                    <pre><code
->.padre {
+                                    <pre>
+<code class="min_code">.padre {
     display: flex; 
     justify-content: flex-start;
-}</pre></code>
+}</code>
+                                    </pre>
                                 </span></div>
                             </div> 
                         </div>
 
                         <div class="propiety">
                             <div class="title_code_container">
-                                <canvas class="title_identify_left"></canvas>
-                                <canvas class="title_identify_center"></canvas>
+                                <div class="title_identify_left"></div>
+                                <div class="title_identify_center"></div>
                                 <div class="title_identify_right"><h5><xmp>justify-content: flex-end;</xmp></h5></div>
                             </div>
 
@@ -414,21 +412,22 @@
                             </div>
 
                             <div class="code_container">
-                                <canvas class="left_css_sub_container"></canvas>
+                                <div class="left_css_sub_container"></div>
                                 <div class="right_code"><span class="code_css_1-4">
-                                    <pre><code
->.padre {
+                                    <pre>
+<code class="min_code">.padre {
     display: flex; 
     justify-content: flex-end;
-}</pre></code>
+}</code>
+                                    </pre>
                                 </span></div>
                             </div> 
                         </div>
 
                         <div class="propiety">
                             <div class="title_code_container">
-                                <canvas class="title_identify_left"></canvas>
-                                <canvas class="title_identify_center"></canvas>
+                                <div class="title_identify_left"></div>
+                                <div class="title_identify_center"></div>
                                 <div class="title_identify_right"><h5><xmp>justify-content: center;</xmp></h5></div>
                             </div>
 
@@ -441,21 +440,22 @@
                             </div>
 
                             <div class="code_container">
-                                <canvas class="left_css_sub_container"></canvas>
+                                <div class="left_css_sub_container"></div>
                                 <div class="right_code"><span class="code_css_1-4">    
-                                    <pre><code
->.padre {
+                                    <pre>
+<code class="min_code">.padre {
     display: flex; 
     justify-content: center;
-}</pre></code>
+}</code>
+                                    </pre>
                                 </span></div>
                             </div> 
                         </div>
 
                         <div class="propiety">
                                 <div class="title_code_container">
-                                    <canvas class="title_identify_left"></canvas>
-                                    <canvas class="title_identify_center"></canvas>
+                                    <div class="title_identify_left"></div>
+                                    <div class="title_identify_center"></div>
                                     <div class="title_identify_right"><h5><xmp>justify-content: space-between;</xmp></h5></div>
                                 </div>
 
@@ -468,21 +468,22 @@
                                 </div>
     
                                 <div class="code_container">
-                                    <canvas class="left_css_sub_container"></canvas>
+                                    <div class="left_css_sub_container"></div>
                                     <div class="right_code"><span class="code_css_1-4">        
-                                        <pre><code
->.padre {
+                                        <pre>
+<code class="min_code">.padre {
     display: flex; 
     justify-content: space-between;
-}</pre></code>  
+}</code>
+                                        </pre>  
                                     </span></div>
                                 </div> 
                         </div>
 
                         <div class="propiety">
                             <div class="title_code_container">
-                                <canvas class="title_identify_left"></canvas>
-                                <canvas class="title_identify_center"></canvas>
+                                <div class="title_identify_left"></div>
+                                <div class="title_identify_center"></div>
                                 <div class="title_identify_right"><h5><xmp>justify-content: space-around;</xmp></h5></div>
                             </div>
                             
@@ -495,21 +496,22 @@
                             </div>
 
                             <div class="code_container">
-                                <canvas class="left_css_sub_container"></canvas>
+                                <div class="left_css_sub_container"></div>
                                 <div class="right_code"><span class="code_css_1-4">    
-                                    <pre><code
->.padre {
+                                    <pre>
+<code class="min_code">.padre {
     display: flex; 
     justify-content: space-around;
-}</pre></code>
+}</code>
+                                    </pre>
                                 </span></div>
                             </div> 
                         </div>
     
                         <div class="propiety">
                             <div class="title_code_container">
-                                <canvas class="title_identify_left"></canvas>
-                                <canvas class="title_identify_center"></canvas>
+                                <div class="title_identify_left"></div>
+                                <div class="title_identify_center"></div>
                                 <div class="title_identify_right"><h5><xmp>justify-content: space-evenly;</xmp></h5></div>
                             </div>
 
@@ -522,13 +524,14 @@
                             </div>
 
                             <div class="code_container">
-                                <canvas class="left_css_sub_container"></canvas>
+                                <div class="left_css_sub_container"></div>
                                 <div class="right_code"><span class="code_css_1-4">    
-                                    <pre><code
->.padre {
+                                    <pre>
+<code class="min_code">.padre {
     display: flex; 
     justify-content: space-evenly;
-}</pre></code>
+}</code>
+                                    </pre>
                                 </span></div>
                             </div> 
                         </div>
@@ -543,8 +546,8 @@
                         
                         <div class="propiety">
                             <div class="title_code_container_default">
-                                <canvas class="title_identify_left_default"></canvas>
-                                <canvas class="title_identify_center"></canvas>
+                                <div class="title_identify_left_default"></div>
+                                <div class="title_identify_center"></div>
                                 <div class="title_identify_right"><h5><xmp>align-items: flex-start;</xmp></h5></div>
                             </div>
                             
@@ -557,13 +560,14 @@
                             </div>
                             
                             <div class="code_container">
-                                <canvas class="left_css_sub_container"></canvas>
+                                <div class="left_css_sub_container"></div>
                                 <div class="right_code"><span class="code_css_1-4">    
-                                    <pre><code
->.padre {
+                                    <pre>
+<code class="min_code">.padre {
     display: flex; 
     align-items: flex-start;
-}</pre></code>
+}</code>
+                                    </pre>
                                 </span></div>
                             </div>
                                 
@@ -571,8 +575,8 @@
 
                         <div class="propiety">
                             <div class="title_code_container">
-                                <canvas class="title_identify_left"></canvas>
-                                <canvas class="title_identify_center"></canvas>
+                                <div class="title_identify_left"></div>
+                                <div class="title_identify_center"></div>
                                 <div class="title_identify_right"><h5><xmp>align-items: flex-end;</xmp></h5></div>
                             </div>
                             
@@ -585,21 +589,22 @@
                             </div>
                             
                             <div class="code_container">
-                                <canvas class="left_css_sub_container"></canvas>
+                                <div class="left_css_sub_container"></div>
                                 <div class="right_code"><span class="code_css_1-4">    
-                                    <pre><code
->.padre {
+                                    <pre>
+<code class="min_code">.padre {
     display: flex; 
     align-items: flex-end;
-}</pre></code>
+}</code>
+                                    </pre>
                                 </span></div>
                             </div> 
                         </div>                        
 
                         <div class="propiety">
                             <div class="title_code_container">
-                                <canvas class="title_identify_left"></canvas>
-                                <canvas class="title_identify_center"></canvas>
+                                <div class="title_identify_left"></div>
+                                <div class="title_identify_center"></div>
                                 <div class="title_identify_right"><h5><xmp>align-items: center;</xmp></h5></div>
                             </div>
                             
@@ -612,21 +617,22 @@
                             </div>
                             
                             <div class="code_container">
-                                <canvas class="left_css_sub_container"></canvas>
+                                <div class="left_css_sub_container"></div>
                                 <div class="right_code"><span class="code_css_1-4">    
-                                    <pre><code
->.padre {
+                                    <pre>
+<code class="min_code">.padre {
     display: flex; 
     align-items: center;
-}</pre></code>
+}</code>
+                                    </pre>
                                 </span></div>
                             </div> 
                         </div>                        
 
                         <div class="propiety">
                             <div class="title_code_container">
-                                <canvas class="title_identify_left"></canvas>
-                                <canvas class="title_identify_center"></canvas>
+                                <div class="title_identify_left"></div>
+                                <div class="title_identify_center"></div>
                                 <div class="title_identify_right"><h5><xmp>align-items: baseline;</xmp></h5></div>
                             </div>
                             
@@ -639,21 +645,22 @@
                             </div>
                             
                             <div class="code_container">
-                                <canvas class="left_css_sub_container"></canvas>
+                                <div class="left_css_sub_container"></div>
                                 <div class="right_code"><span class="code_css_1-4">    
-                                    <pre><code
->.padre {
+                                    <pre>
+<code class="min_code">.padre {
     display: flex; 
     align-items: baseline;
-}</pre></code>
+}</code>
+                                    </pre>
                                 </span></div>
                             </div> 
                         </div>
 
                         <div class="propiety">
                             <div class="title_code_container">
-                                <canvas class="title_identify_left"></canvas>
-                                <canvas class="title_identify_center"></canvas>
+                                <div class="title_identify_left"></div>
+                                <div class="title_identify_center"></div>
                                 <div class="title_identify_right"><h5><xmp>align-items: stretch;</xmp></h5></div>
                             </div>
                             
@@ -666,10 +673,10 @@
                             </div>
                             
                             <div class="code_container" id="double_code_container">
-                                <canvas class="left_css_sub_container"></canvas>
+                                <div class="left_css_sub_container"></div>
                                 <div class="right_code"><span class="code_css_1-4">    
-                                    <pre><code
->
+                                    <pre>
+<code>
 .padre {
     display: flex; 
     align-items: stretch;
@@ -677,9 +684,8 @@
 
 .hijo {
     height: auto;
-}
-
-</pre></code>
+}</code>
+                                    </pre>
                                 </span></div>
                             </div> 
                         </div>

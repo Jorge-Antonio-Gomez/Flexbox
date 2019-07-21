@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Metadatos -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-sacale=1, minimum-sacale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" sizes="16x16 24x24 32x32 64x64">
+    
+    <!-- Sintaxis del código de colores (highlight.js)-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <link rel="stylesheet" href="styles/code_styles/zenburn.css">
+    
+    <!-- Estilos -->
+    <style>
+        @font-face {
+            font-family: Simplifica;
+            src: url(styles/fonts/Simplifica.ttf) format("truetype" );
+        }
+    </style>
+    <link href="styles/style.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Righteous|Dosis|Overpass|Raleway|Inconsolata|Roboto+Mono:200,400,700&display=swap" rel="stylesheet">
+
+    <title>Uso de Flexbox</title>
+</head>
+<body>
+
+    <header>
+
+        <div class="title">
+            <h1>FLEXBOX</h1>
+            <h2>Aprendiendo desde cero</h2>
+        </div>
+
+        <div class="nav">
+            <ul class="nav_var">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Índice</a></li>
+                <li><a href="#">Acerca</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </div>
+
+    </header>
+
+    <section class="wrapper">
+            <section class="main">
+                <div class="text_main">
+
+                    <h3 class="h3_main">¿Qué es y cómo funciona <b>Flexbox?</b></h3>
+                    <p>Flexbox es una forma o comando utilizado en <b>CSS</b> para ordenar o poner en cierta disposición los elementos de una página web. Siendo el sucesor de comandos como <a class="text_code">float</a>.</p>
+                    <p></p>Más adelante vamos a ver los comandos más importantes utilizados para Flexbox. Primero que nada debemos saber que para utilizar este comando necesitamos de un <b>objeto padre</b>, al que le daremos la propiedad de <a class="text_code">display: flex;</a> así como <b>objetos hijos</b> los cuales se distribuirán dentro del objeto padre. A continuación podemos ver la estructura básica de un archivo HTML, en el que son visibles los objetos padre e hijos.</p>
+
+                    <span class="container_code_html"> 
+                        <canvas class="left_html left_html_central"></canvas>
+                        <pre>
+                            <code>
+&lt;html lang="es"&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;title&gt;Documento&lt;/title&gt;
+    &lt;/head&gt;
+
+    &lt;body&gt;
+        &lt;div class="padre"&gt;
+            &lt;div class="hijo"&gt;Contenido&lt;/div&gt;
+            &lt;div class="hijo"&gt;Contenido&lt;/div&gt;
+            &lt;div class="hijo"&gt;Contenido&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+                            </code>
+                        </pre>
+                    </span> 
+
+                    <p>En el siguiente cuadro podemos ver nuestro contenedor padre sin ninguna propiedad <b>flexbox</b>, con su respectivo código en CSS.</p>
+
+                    <div class="propiety" id="propiety_padre">
+                        <div class="title_code_container_default">
+				        <canvas class="title_identify_center title_identify_center_big"></canvas>
+				        <div class="title_identify_right"><h5><xmp>Padre con propiedades default</xmp></h5></div>
+                        </div>
+
+                        <div class="padre_aspect_ratio">
+                            <div class="padre_default">
+                                <div class="hijo_default">A</div>
+                                <div class="hijo_default">B</div>
+                                <div class="hijo_default">C</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <span class="container_code_css">
+                        <canvas class="left_css"></canvas>
+                        <pre>
+                            <code>
+.padre {
+    height: 340px;
+    width: 680px;
+
+    background-color: #9aafbb;
+    border-radius: 5px;
+}
+
+.hijo {
+    margin: 15px;
+    
+    width: 150px;
+    height: 70px;
+    background-color: #47565f;
+    border-radius: 5px;
+    
+    font-family: Righteous;
+    color: white;
+    font-size: 1.5em;
+
+    <strike>display: flex;</strike>
+    <strike>align-items: center;</strike>
+    <strike>justify-content: center;</strike>
+}
+                            </code>
+                        </pre>
+                    </span>
+
+                    <p>Ahora bien, antes de comenzar a trabajar con esta propiedad le vamos a dar al objeto padre un <a class="text_code">display: flexbox</a> y un <a class="text_code">overflow: hidden;</a>, para así poder comenzar a trabajar con los objetos hijos:</p>
+
+                    <div class="propiety" id="propiety_padre">
+                            <div class="title_code_container_default" id="title_code_container_padre">
+
+                                    <canvas class="title_identify_center title_identify_center_big"></canvas>
+                                    <div class="title_identify_right"><h5><xmp>display: flexbox;</xmp></h5></div>
+                            </div>
+        
+                            <div class="padre_aspect_ratio">
+                                <div class="padre_default padre_display_flex">
+                                    <div class="hijo_default">A</div>
+                                    <div class="hijo_default">B</div>
+                                    <div class="hijo_default">C</div>
+                                </div>
+                            </div>
+                    </div>
+
+                    <p>Más adelante veremos títulos de color <span class="orange_text">naranja</span> y <span class="blue_text">azul</span>. Los naranjas son los <b>títulos default o por defecto</b> que utiliza CSS, y los azules son propiedades que podemos usar en nuestros diseños únicamente cuando las invocamos.</p>
+
+                    <p>Para trabajar con flexbox vamos a utilizar los siguientes comandos:</p>
+
+                    <h4 class="h4_main">Flex-direction</h4>
+
+                    <p>Este comando se utiliza para decirle a nuetra página WEB en que orden va a acomodar a los objetos hijos dentro del padre, así como su disposición. A continuación podemos ver algunos ejemplos con este comando.</p>
+
+                    <div class="function_container">
+
+                        <div class="propiety">
+
+                            <div class="title_code_container_default">
+                                <canvas class="title_identify_left_default"></canvas>
+                                <canvas class="title_identify_center"></canvas>
+                                <div class="title_identify_right"><h5><xmp>flex-direction: row;</xmp></h5></div>
+                            </div>
+
+                            <div class="padre_sc_aspect_ratio">
+                                <div class="padre_sub_container" id="padre_fd_row">
+                                    <div class="hijo_sub_container">A</div>
+                                    <div class="hijo_sub_container">B</div>
+                                    <div class="hijo_sub_container">C</div>
+                                </div>
+                            </div>
+
+                            <div class="code_container">
+                                <canvas class="left_css_sub_container"></canvas>
+                                <div class="right_code"><span class="code_css_1-4">
+                                    <pre><code
+>.padre {
+    display: flex; 
+    flex-direction: row;
+}</pre></code>
+                                </span></div>
+                            </div>
+
+                        </div>
+
+                        <div class="propiety">
+
+                            <div class="title_code_container">
+                                <canvas class="title_identify_left"></canvas>
+                                <canvas class="title_identify_center"></canvas>
+                                <div class="title_identify_right"><h5><xmp>flex-direction: row-reverse;</xmp></h5></div>
+                            </div>
+                            
+                            <div class="padre_sc_aspect_ratio">
+                                <div class="padre_sub_container" id="padre_fd_row_reverse">
+                                    <div class="hijo_sub_container">A</div>
+                                    <div class="hijo_sub_container">B</div>
+                                    <div class="hijo_sub_container">C</div>
+                                </div>
+                            </div>
+
+                            <div class="code_container">
+                                <canvas class="left_css_sub_container"></canvas>
+                                <div class="right_code"><span class="code_css_1-4">
+                                    <pre><code
+>.padre {
+    display: flex; 
+    flex-direction: row-reverse;
+}</pre></code>
+                                </span></div>
+                            </div>
+    
+                            </div>
+                    
+                        <div class="propiety">
+
+                            <div class="title_code_container">
+                                <canvas class="title_identify_left"></canvas>
+                                <canvas class="title_identify_center"></canvas>
+                                <div class="title_identify_right"><h5><xmp>flex-direction: column;</xmp></h5></div>
+                            </div>
+
+                            <div class="padre_sc_aspect_ratio">
+                                <div class="padre_sub_container" id="padre_fd_column">
+                                    <div class="hijo_sub_container">A</div>
+                                    <div class="hijo_sub_container">B</div>
+                                    <div class="hijo_sub_container">C</div>
+                                </div>
+                            </div>
+
+                            <div class="code_container">
+                                <canvas class="left_css_sub_container"></canvas>
+                                <div class="right_code"><span class="code_css_1-4">    
+                                <pre><code
+>.padre {
+    display: flex; 
+    flex-direction: column;
+}</pre></code>
+                                </span></div>
+                            </div>
+
+                        </div>
+
+                        <div class="propiety">
+
+                            <div class="title_code_container">
+                                <canvas class="title_identify_left"></canvas>
+                                <canvas class="title_identify_center"></canvas>
+                                <div class="title_identify_right"><h5><xmp>flex-direction: column-reverse;</xmp></h5></div>
+                            </div>
+
+                            <div class="padre_sc_aspect_ratio">
+                                <div class="padre_sub_container" id="padre_fd_column_reverse">
+                                    <div class="hijo_sub_container">A</div>
+                                    <div class="hijo_sub_container">B</div>
+                                    <div class="hijo_sub_container">C</div>
+                                </div>
+                            </div>
+
+                            <div class="code_container">
+                                <canvas class="left_css_sub_container"></canvas>
+                                <div class="right_code"><span class="code_css_1-4">
+                                    <pre><code
+>.padre {
+    display: flex; 
+    flex-direction: column-reverse;
+}</pre></code>
+                                </span></div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <h4 class="h4_main">Flex-wrap</h4>
+
+                    <p>Esta propiedad es muy útil para hacer que CSS respete el ancho de los objetos hijos. En este caso vamos a utilizar como ejemplo un <B>objeto padre con seis hijos</B>, con las siguientes dimensiones:
+                    </p>
+
+                    <span class="container_code_css">
+                        <canvas class="left_css" id="min_left_css"></canvas>
+                            <pre><code>
+.hijo {
+    width: 70px;
+    height: 30px;
+}</code></pre>
+                    </span>
+
+                    <p>Hay que recordar que estas son las dimensiones en un objeto padre pequeño, como los que hemos visto arriba. Ahora bien, si dejamos los seis objetos hijos con la propiedad flexbox dentro del padre, por defecto estos se distribuirán a lo largo de una línea, y por lo tanto perderan ancho. A menos que nosotros le digamos a CSS que queremos que respete de forma explicita ese ancho, poniendo los objetos que no caben en una línea en la siguiente.</p>
+
+                    <div class="function_container">
+
+                        <div class="propiety">
+
+                            <div class="title_code_container_default">
+                                <canvas class="title_identify_left_default"></canvas>
+                                <canvas class="title_identify_center"></canvas>
+                                <div class="title_identify_right"><h5><xmp>flex-wrap: nowrap;</xmp></h5></div>
+                            </div>
+
+                            <div class="padre_sc_aspect_ratio">
+                                <div class="padre_sub_container" id="padre_fw_nowrap">
+                                        <div class="hijo_sub_container">A</div>
+                                        <div class="hijo_sub_container">B</div>
+                                        <div class="hijo_sub_container">C</div>
+                                        <div class="hijo_sub_container">D</div>
+                                        <div class="hijo_sub_container">E</div>
+                                        <div class="hijo_sub_container">F</div>
+                                        <div class="hijo_sub_container">G</div>
+                                        <div class="hijo_sub_container">H</div>
+                                        <div class="hijo_sub_container">I</div>
+                                </div>
+                            </div>
+
+                            <div class="code_container">
+                                <canvas class="left_css_sub_container"></canvas>
+                                <div class="right_code"><span class="code_css_1-4">
+                                    <pre><code
+>.padre {
+    display: flex; 
+    flex-wrap: nowrap;
+}</pre></code>
+                                </span></div>
+                            </div>
+
+                        </div>
+
+                        <div class="propiety">
+
+                            <div class="title_code_container">
+                                <canvas class="title_identify_left"></canvas>
+                                <canvas class="title_identify_center"></canvas>
+                                <div class="title_identify_right"><h5><xmp>flex-wrap: wrap;</xmp></h5></div>
+                            </div>
+
+                            <div class="padre_sc_aspect_ratio">
+                                <div class="padre_sub_container" id="padre_fw_wrap">
+                                        <div class="hijo_sub_container" id="hijo_sc_wrap_width">A</div>
+                                        <div class="hijo_sub_container" id="hijo_sc_wrap_width">B</div>
+                                        <div class="hijo_sub_container" id="hijo_sc_wrap_width">C</div>
+                                        <div class="hijo_sub_container" id="hijo_sc_wrap_width">D</div>
+                                        <div class="hijo_sub_container" id="hijo_sc_wrap_width">E</div>
+                                        <div class="hijo_sub_container" id="hijo_sc_wrap_width">F</div>
+                                        <div class="hijo_sub_container" id="hijo_sc_wrap_width">G</div>
+                                        <div class="hijo_sub_container" id="hijo_sc_wrap_width">H</div>
+                                        <div class="hijo_sub_container" id="hijo_sc_wrap_width">I</div>
+                                </div>
+                            </div>
+
+                            <div class="code_container" id="double_code_container">
+                                <canvas class="left_css_sub_container"></canvas>
+                                <div class="right_code"><span class="code_css_1-4">
+                                    <pre><code
+>.padre {
+    display: flex; 
+    flex-wrap: wrap;
+}
+
+.hijo {
+    width: 54px;
+}</code></pre>
+                                </span></div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <h4 class="h4_main">Justify-content</h4>
+
+                    <p>Otra propiedad interesante es <a class="text_code">Justify-content</a> . Con ella podemos indicarle al CSS como va a justificar el contenido dentro del objeto padre. Esta propiedad se parece bastante al atributo <a class="text_code">text-align</a> , pero orientada a todos los objetos del objeto padre (contendedores, imagenes, texto, etc.).</p>
+
+                    <p>Nos ayuda a alinear el contenido horizontalmente</p>
+
+                    <div class="function_container">
+
+                        <div class="propiety">
+                            <div class="title_code_container_default">
+                                <canvas class="title_identify_left_default"></canvas>
+                                <canvas class="title_identify_center"></canvas>
+                                <div class="title_identify_right"><h5><xmp>justify-content: flex-start;</xmp></h5></div>
+                            </div>
+
+                            <div class="padre_sc_aspect_ratio">
+                                <div class="padre_sub_container" id="padre_jc_flex_start">
+                                    <div class="hijo_sub_container">A</div>
+                                    <div class="hijo_sub_container">B</div>
+                                    <div class="hijo_sub_container">C</div>
+                                </div>
+                            </div>
+
+                            <div class="code_container">
+                                <canvas class="left_css_sub_container"></canvas>
+                                <div class="right_code"><span class="code_css_1-4">    
+                                    <pre><code
+>.padre {
+    display: flex; 
+    justify-content: flex-start;
+}</pre></code>
+                                </span></div>
+                            </div> 
+                        </div>
+
+                        <div class="propiety">
+                            <div class="title_code_container">
+                                <canvas class="title_identify_left"></canvas>
+                                <canvas class="title_identify_center"></canvas>
+                                <div class="title_identify_right"><h5><xmp>justify-content: flex-end;</xmp></h5></div>
+                            </div>
+
+                            <div class="padre_sc_aspect_ratio">
+                                <div class="padre_sub_container" id="padre_jc_flex_end">
+                                    <div class="hijo_sub_container">A</div>
+                                    <div class="hijo_sub_container">B</div>
+                                    <div class="hijo_sub_container">C</div>
+                                </div>
+                            </div>
+
+                            <div class="code_container">
+                                <canvas class="left_css_sub_container"></canvas>
+                                <div class="right_code"><span class="code_css_1-4">
+                                    <pre><code
+>.padre {
+    display: flex; 
+    justify-content: flex-end;
+}</pre></code>
+                                </span></div>
+                            </div> 
+                        </div>
+
+                        <div class="propiety">
+                            <div class="title_code_container">
+                                <canvas class="title_identify_left"></canvas>
+                                <canvas class="title_identify_center"></canvas>
+                                <div class="title_identify_right"><h5><xmp>justify-content: center;</xmp></h5></div>
+                            </div>
+
+                            <div class="padre_sc_aspect_ratio">
+                                <div class="padre_sub_container" id="padre_jc_center">
+                                    <div class="hijo_sub_container">A</div>
+                                    <div class="hijo_sub_container">B</div>
+                                    <div class="hijo_sub_container">C</div>
+                                </div>
+                            </div>
+
+                            <div class="code_container">
+                                <canvas class="left_css_sub_container"></canvas>
+                                <div class="right_code"><span class="code_css_1-4">    
+                                    <pre><code
+>.padre {
+    display: flex; 
+    justify-content: center;
+}</pre></code>
+                                </span></div>
+                            </div> 
+                        </div>
+
+                        <div class="propiety">
+                                <div class="title_code_container">
+                                    <canvas class="title_identify_left"></canvas>
+                                    <canvas class="title_identify_center"></canvas>
+                                    <div class="title_identify_right"><h5><xmp>justify-content: space-between;</xmp></h5></div>
+                                </div>
+
+                                <div class="padre_sc_aspect_ratio">
+                                    <div class="padre_sub_container" id="padre_jc_space_between">
+                                        <div class="hijo_sub_container">A</div>
+                                        <div class="hijo_sub_container">B</div>
+                                        <div class="hijo_sub_container">C</div>
+                                    </div>
+                                </div>
+    
+                                <div class="code_container">
+                                    <canvas class="left_css_sub_container"></canvas>
+                                    <div class="right_code"><span class="code_css_1-4">        
+                                        <pre><code
+>.padre {
+    display: flex; 
+    justify-content: space-between;
+}</pre></code>  
+                                    </span></div>
+                                </div> 
+                        </div>
+
+                        <div class="propiety">
+                            <div class="title_code_container">
+                                <canvas class="title_identify_left"></canvas>
+                                <canvas class="title_identify_center"></canvas>
+                                <div class="title_identify_right"><h5><xmp>justify-content: space-around;</xmp></h5></div>
+                            </div>
+                            
+                            <div class="padre_sc_aspect_ratio">
+                                <div class="padre_sub_container" id="padre_jc_space_around">
+                                    <div class="hijo_sub_container">A</div>
+                                    <div class="hijo_sub_container">B</div>
+                                    <div class="hijo_sub_container">C</div>
+                                </div>
+                            </div>
+
+                            <div class="code_container">
+                                <canvas class="left_css_sub_container"></canvas>
+                                <div class="right_code"><span class="code_css_1-4">    
+                                    <pre><code
+>.padre {
+    display: flex; 
+    justify-content: space-around;
+}</pre></code>
+                                </span></div>
+                            </div> 
+                        </div>
+    
+                        <div class="propiety">
+                            <div class="title_code_container">
+                                <canvas class="title_identify_left"></canvas>
+                                <canvas class="title_identify_center"></canvas>
+                                <div class="title_identify_right"><h5><xmp>justify-content: space-evenly;</xmp></h5></div>
+                            </div>
+
+                            <div class="padre_sc_aspect_ratio">
+                                <div class="padre_sub_container" id="padre_jc_space_evenly">
+                                    <div class="hijo_sub_container">A</div>
+                                    <div class="hijo_sub_container">B</div>
+                                    <div class="hijo_sub_container">C</div>
+                                </div>
+                            </div>
+
+                            <div class="code_container">
+                                <canvas class="left_css_sub_container"></canvas>
+                                <div class="right_code"><span class="code_css_1-4">    
+                                    <pre><code
+>.padre {
+    display: flex; 
+    justify-content: space-evenly;
+}</pre></code>
+                                </span></div>
+                            </div> 
+                        </div>
+
+                    </div>
+                    
+                    <h4 class="h4_main">Align-items</h4>
+                    
+                    <p><a class="text_code">Align-items</a> es un comando que sirve para determinar la altura a la que se encontrarán los hijos dentro del contenedor al que le apliquemos esta propiedad. No se utiliza para determinar la altura en píxeles, sino la altura relativa al contenedor. Por ejemplo: el <b>inicio</b>, <b>final</b> o <b>centro</b> del contenedor.</p>
+                    
+                    <div class="function_container">
+                        
+                        <div class="propiety">
+                            <div class="title_code_container_default">
+                                <canvas class="title_identify_left_default"></canvas>
+                                <canvas class="title_identify_center"></canvas>
+                                <div class="title_identify_right"><h5><xmp>align-items: flex-start;</xmp></h5></div>
+                            </div>
+                            
+                            <div class="padre_sc_aspect_ratio">
+                                <div class="padre_sub_container" id="padre_ai_flex_start">
+                                    <div class="hijo_sub_container">A</div>
+                                    <div class="hijo_sub_container">B</div>
+                                    <div class="hijo_sub_container">C</div>
+                                </div>
+                            </div>
+                            
+                            <div class="code_container">
+                                <canvas class="left_css_sub_container"></canvas>
+                                <div class="right_code"><span class="code_css_1-4">    
+                                    <pre><code
+>.padre {
+    display: flex; 
+    align-items: flex-start;
+}</pre></code>
+                                </span></div>
+                            </div>
+                                
+                        </div>
+
+                        <div class="propiety">
+                            <div class="title_code_container">
+                                <canvas class="title_identify_left"></canvas>
+                                <canvas class="title_identify_center"></canvas>
+                                <div class="title_identify_right"><h5><xmp>align-items: flex-end;</xmp></h5></div>
+                            </div>
+                            
+                            <div class="padre_sc_aspect_ratio">
+                                <div class="padre_sub_container" id="padre_ai_flex_end">
+                                    <div class="hijo_sub_container">A</div>
+                                    <div class="hijo_sub_container">B</div>
+                                    <div class="hijo_sub_container">C</div>
+                                </div>
+                            </div>
+                            
+                            <div class="code_container">
+                                <canvas class="left_css_sub_container"></canvas>
+                                <div class="right_code"><span class="code_css_1-4">    
+                                    <pre><code
+>.padre {
+    display: flex; 
+    align-items: flex-end;
+}</pre></code>
+                                </span></div>
+                            </div> 
+                        </div>                        
+
+                        <div class="propiety">
+                            <div class="title_code_container">
+                                <canvas class="title_identify_left"></canvas>
+                                <canvas class="title_identify_center"></canvas>
+                                <div class="title_identify_right"><h5><xmp>align-items: center;</xmp></h5></div>
+                            </div>
+                            
+                            <div class="padre_sc_aspect_ratio">
+                                <div class="padre_sub_container" id="padre_ai_center">
+                                    <div class="hijo_sub_container">A</div>
+                                    <div class="hijo_sub_container">B</div>
+                                    <div class="hijo_sub_container">C</div>
+                                </div>
+                            </div>
+                            
+                            <div class="code_container">
+                                <canvas class="left_css_sub_container"></canvas>
+                                <div class="right_code"><span class="code_css_1-4">    
+                                    <pre><code
+>.padre {
+    display: flex; 
+    align-items: center;
+}</pre></code>
+                                </span></div>
+                            </div> 
+                        </div>                        
+
+                        <div class="propiety">
+                            <div class="title_code_container">
+                                <canvas class="title_identify_left"></canvas>
+                                <canvas class="title_identify_center"></canvas>
+                                <div class="title_identify_right"><h5><xmp>align-items: baseline;</xmp></h5></div>
+                            </div>
+                            
+                            <div class="padre_sc_aspect_ratio">
+                                <div class="padre_sub_container" id="padre_ai_baseline">
+                                    <div class="hijo_sub_container" id="hijo_baseline_A">A</div>
+                                    <div class="hijo_sub_container" id="hijo_baseline_B">B</div>
+                                    <div class="hijo_sub_container" id="hijo_baseline_C">C</div>
+                                </div>
+                            </div>
+                            
+                            <div class="code_container">
+                                <canvas class="left_css_sub_container"></canvas>
+                                <div class="right_code"><span class="code_css_1-4">    
+                                    <pre><code
+>.padre {
+    display: flex; 
+    align-items: baseline;
+}</pre></code>
+                                </span></div>
+                            </div> 
+                        </div>
+
+                        <div class="propiety">
+                            <div class="title_code_container">
+                                <canvas class="title_identify_left"></canvas>
+                                <canvas class="title_identify_center"></canvas>
+                                <div class="title_identify_right"><h5><xmp>align-items: stretch;</xmp></h5></div>
+                            </div>
+                            
+                            <div class="padre_sc_aspect_ratio">
+                                <div class="padre_sub_container" id="padre_ai_stretch">
+                                    <div class="hijo_sub_container" id="hijo_sc_stretch">A</div>
+                                    <div class="hijo_sub_container" id="hijo_sc_stretch">B</div>
+                                    <div class="hijo_sub_container" id="hijo_sc_stretch">C</div>
+                                </div>
+                            </div>
+                            
+                            <div class="code_container" id="double_code_container">
+                                <canvas class="left_css_sub_container"></canvas>
+                                <div class="right_code"><span class="code_css_1-4">    
+                                    <pre><code
+>
+.padre {
+    display: flex; 
+    align-items: stretch;
+}
+
+.hijo {
+    height: auto;
+}
+
+</pre></code>
+                                </span></div>
+                            </div> 
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+    </section>
+            
+    <footer>
+        <p class="f_autor"> Jorge Antonio Gómez García </p> 
+    </footer>
+
+</body>
+</html>

@@ -145,9 +145,14 @@ aside {
 }
 
 .h4_main {
+    width: 100%;
+
     font-size: 20px;
     color: var(--theme-color);
-    padding: 16px;
+    padding: 16px 0px 16px 0px;
+    
+    /* display: flex;
+    align-items: center; */
 }
 
 .h3_aside {
@@ -206,12 +211,10 @@ h5 {
 
 .text_code{
     font-family: Inconsolata;
+    padding: 3px 7px 3px 7px;
 
-    padding-bottom: 1px;
-    padding-left: 10px;
-    padding-right: 10px;
-    background-color: rgb(233, 233, 233);
-    border-radius: 4px;
+    background-color: #00000022;
+    border-radius: 3px;
 }
 
 .container_code_javascript{
@@ -402,7 +405,7 @@ code {
     
     flex-direction: column;
     
-    background-color: #dddddd;
+    background-color: #00000022;
     border-radius: 5px;
 }
 

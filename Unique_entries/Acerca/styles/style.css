@@ -7,75 +7,6 @@
     --text-theme-color: #fff;
 }
 
-/*----------------------------------Header---------------------------------*/
-
-.title {
-    height: 180px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    color: var(--text-theme-color);
-    background-color: var(--theme-color);
-}
-
-.nav {
-    background-color: #404040;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-}
-
-.nav_var {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    max-width: 70%;
-}
-
-.nav_var li {
-    width: 100%;
-    
-    list-style: none;
-
-    font: bold 14px Raleway;
-    font-variant: small-caps;
-}
-
-.nav_var li a {
-    width: 100%;
-    height: 40px;
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-    text-decoration: none;
-
-    color: #ccc;
-}
-
-.nav_var li:hover {
-    background-color: #2c2c2c;
-}
-
-.title {
-    flex-direction: column;
-    display: flex;
-    align-items: center;
-}
-
-h1 {
-    font: 96px normal, Simplifica;
-    letter-spacing: 12px;
-    line-height: 80%;
-}
-
-h2 {
-    font: bold 17px Raleway;
-    color: #666;
-}
-
 /*---------------------------Estilos iniciales-----------------------------*/
 
 .hljs {
@@ -619,89 +550,23 @@ code {
         height: auto;
     }
 
-/*----------------------------------Footer---------------------------------*/
-
-footer {
-    background-color: var(--theme-color);
-}
-
-.f_autor {
-    color: #666666;
-    padding: 15px;
-    text-align: center;
-    font-family: Overpass;
-}
-
-.f_autor:hover {
-    color: rgb(124, 124, 124);
-    cursor: pointer;
-}
-
 /*--------------------------------Responsive-------------------------------*/
 
 /* Medidas:
-        1024
+    1680
+    1024
     768
-        480
+    480
     320    
 */
 
 @media screen and (max-width: 1024px) {
-    .nav_var {
-        max-width: 80%;
-    }
-
     .main {
-        width: 90%;
-    }
-
-    .function_container {
-        margin: 2% 0% 2% 0%;
-        width: 100%;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .title {
-        height: 140px;
-    }
-
-    h5 {
-        font-size: 70%;
-    }
-
-    .min_code {
-        margin-left: 10px;
-        font-size: 1em;
-    }
-
-    .function_container {
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-
-    .propiety {
-        width: 85%;
+        width: 80%;
     }
 }
 
 @media screen and (max-width: 480px) {
-    .title {
-        height: 110px;
-    }
-
-    h1 {
-        font-size: 60px;
-    }
-
-    h2 {
-        font-size: 16px;
-    }
-
-    .nav_var {
-        max-width: 100%;
-    }
-
     .main {
         min-width: 100%;
     }

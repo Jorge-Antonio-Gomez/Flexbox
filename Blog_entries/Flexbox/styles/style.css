@@ -37,9 +37,8 @@
     width: 100%;
     
     list-style: none;
-
     font: bold 14px Raleway;
-    font-variant: small-caps;
+    text-transform: uppercase; 
 }
 
 .nav_var li a {

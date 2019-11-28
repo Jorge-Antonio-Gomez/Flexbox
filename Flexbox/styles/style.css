@@ -14,6 +14,11 @@
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+    scroll-snap-align: end;
+}
+
 .title {
     height: 180px;
     display: flex;
@@ -229,6 +234,7 @@ aside {
 
 .text_main {
     padding: 3%;
+    scroll-behavior: smooth;
 }
 
 .text_aside {

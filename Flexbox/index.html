@@ -37,7 +37,7 @@
             <ul class="nav_var">
                 <li><a href="#">Inicio</a></li>
                 <li><a href="#">Índice</a></li>
-                <li><a href="#">Acerca de mí</a></li>
+                <li><a href="#">Acerca</a></li>
                 <li><a href="#">Contacto</a></li>
             </ul>
         </div>
@@ -48,15 +48,24 @@
             <section class="main">
                 <div class="text_main">
 
-                    <h3 class="h3_main">¿Qué es Flexbox y cómo funciona?</h3>
-                    <p>Flexbox es una modelo de sieño WEB utilizado en <b>CSS</b> para ordenar o poner en cierta disposición los elementos de una página web. Esto de manera flexible. Siendo el sucesor de propiedades como <a class="text_code">float</a>.</p>
+                    <h3 class="h3_main" id="c_intro"><a href="#top">Contexto e introducción</a></h3>
+                    
+                    <h3 class="h4_main" id="w_is"><a href="#top">¿Qué es Flexbox y cómo funciona?</a></h3>
+
+                    <p>Flexbox es una modelo de diseño WEB utilizado en <b>CSS</b> para ordenar los elementos de una página web o para disponerlos en cierta disposición dentro de esta. Esto gracias a contenedores flexibles. Siendo el sucesor de propiedades como <a class="text_code">float</a> (en la mayoría de los casos).</p>
                     <p>Más adelante vamos a ver las propiedades más importantes utilizados para Flexbox. Primero que nada debemos saber que para utilizar este modelo necesitamos de un <b>objeto padre</b>, al que le daremos la propiedad de <a class="text_code">display: flex;</a> así como <b>objetos hijos</b> los cuales se distribuirán dentro del objeto padre. A continuación podemos ver la estructura básica de un archivo HTML, en el que son visibles los objetos padre e hijos.</p>
              
                     <div class="index_container">
                         <h3 class="index_title" id="top">Índice de contenido</h3>
                         <ul class="list_index">
 
-                            <li class="li_lvl_1"><a href="#" class="a_lvl_1">¿Qué es Flexbox y cómo funciona?</a></li>
+                            <li class="li_lvl_1"><a href="#c_intro" class="a_lvl_1">Contexto e introducción</a>
+                                <ul class="category">
+                                    <li class="li_lvl_2"></a>¿Qué es flexbox? (para novatos)</li>
+                                    <li class="li_lvl_2"></a>¿Para qué sirve Flexbox?</li>
+                                </ul>
+                            </li>
+                            <li class="li_lvl_1"><a href="#w_is" class="a_lvl_1">¿Qué es Flexbox y cómo funciona?</a></li>
                             <li class="li_lvl_1"><a href="#f_direction" class="a_lvl_1">Flex-direction</a>
                                 <ul class="category">
                                     <li class="li_lvl_2"></a>Row</li>
@@ -91,7 +100,6 @@
                                     <li class="li_lvl_2"></a>Center</li>
                                     <li class="li_lvl_2"></a>Baseline</li>
                                     <li class="li_lvl_2"></a>Stretch</li>
-                                    <li class="li_lvl_2"></a>Space-evenly</li>
                                 </ul>
                             </li>
 
@@ -100,9 +108,9 @@
                                     <li class="li_lvl_2"></a>Flex-start</li>
                                     <li class="li_lvl_2"></a>Flex-end</li>
                                     <li class="li_lvl_2"></a>Center</li>
-                                    <li class="li_lvl_2"></a>Baseline</li>
+                                    <li class="li_lvl_2"></a>Space-between</li>
+                                    <li class="li_lvl_2"></a>Space-around</li>
                                     <li class="li_lvl_2"></a>Stretch</li>
-                                    <li class="li_lvl_2"></a>Space-evenly</li>
                                 </ul>
                             </li>
 
@@ -213,7 +221,7 @@
                             </div>
 
                             <div class="info_container">
-                                <p class="info_p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt eius ex sapiente nam nesciunt. Excepturi error nulla numquam maiores obcaecati repellendus natus eligendi. Voluptas, doloribus.</p>
+                                <p class="info_p">Permite agrupar a los elementos hijos en <b>fila</b>, ordenandolos dentro del contenedor padre de izquierda a derecha.</p>
                             </div>
 
                             <div class="padre_sc_aspect_ratio">
@@ -247,7 +255,7 @@
                             </div>
                             
                             <div class="info_container">
-                                <p class="info_p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt eius ex sapiente nam nesciunt. Excepturi error nulla numquam maiores obcaecati repellendus natus eligendi. Voluptas, doloribus.</p>
+                                <p class="info_p">Permite agrupar a los elementos hijos en <b>fila de reversa</b>, ordenándolos dentro del contenedor padre de derecha a izquierda. Cambiando también el orden en que se muestran en pantalla (cómo si se hubieran puesto en un espejo de manera vertical comparados con la propiedad <b>row</b>).</p>
                             </div>
 
                             <div class="padre_sc_aspect_ratio">
@@ -645,7 +653,7 @@
                     
                     <h4 class="h4_main" id="a_items"><a href="#top">Align-items</a></h4>
                     
-                    <p><a class="text_code">Align-items</a> es una propiedad que sirve para determinar la altura a la que se encontrarán los hijos dentro del contenedor al que le apliquemos esta propiedad. No se utiliza para determinar la altura en píxeles, sino la altura relativa al contenedor. Por ejemplo: el <b>inicio</b>, <b>final</b> o <b>centro</b> del contenedor.</p>
+                    <p><a class="text_code">Align-items</a> es una propiedad que sirve para determinar la altura a la que se encontrarán los hijos dentro del contenedor al que le apliquemos esta propiedad. No se utiliza para determinar la altura en píxeles, sino la altura relativa al contenedor. Por ejemplo: el <b>inicio</b>, <b>final</b> o <b>centro</b> del mismo contenedor.</p>
                     
                     <div class="function_container">
                         
@@ -815,6 +823,236 @@
                             </div> 
                         </div>
                     </div>
+
+                        <h4 class="h4_main" id="a_content"><a href="#top">align-content</a></h4>
+
+                        <p>Otra propiedad interesante es <a class="text_code">Justify-content</a> . Con ella podemos indicarle al CSS como va a justificar el contenido dentro del objeto padre. Esta propiedad se parece bastante al atributo <a class="text_code">text-align</a> , pero orientada a todos los objetos del objeto padre (contendedores, imagenes, texto, etc.).</p>
+
+                    <div class="function_container">
+                    
+                        <div class="propiety">
+                            <div class="title_code_container_default">
+                                <div class="title_identify_left_default"></div>
+                                <div class="title_identify_center"></div>
+                                <div class="title_identify_right"><h5><xmp>align-content: flex-start;</xmp></h5></div>
+                            </div>
+                            
+                            <div class="info_container">
+                                <p class="info_p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt eius ex sapiente nam nesciunt. Excepturi error nulla numquam maiores obcaecati repellendus natus eligendi. Voluptas, doloribus.</p>
+                            </div>
+
+                            <div class="padre_sc_aspect_ratio">
+                                <div class="padre_sub_container" id="padre_ac_flex_start">
+                                    <div class="hijo_sub_container">A</div>
+                                    <div class="hijo_sub_container">B</div>
+                                    <div class="hijo_sub_container">C</div>
+                                    <div class="hijo_sub_container">D</div>
+                                    <div class="hijo_sub_container">E</div>
+                                    <div class="hijo_sub_container">F</div>
+                                </div>
+                            </div>
+                            
+                            <div class="code_container">
+                                <div class="left_css_sub_container"></div>
+                                <div class="right_code"><span class="code_css_1-4">    
+                                    <pre>
+<code class="min_code">.padre {
+    display: flex; 
+    align-content: flex-start;
+    flex-wrap: wrap;
+}</code>
+                                    </pre>
+                                </span></div>
+                            </div>
+                                
+                        </div>
+
+                        <div class="propiety">
+                            <div class="title_code_container">
+                                <div class="title_identify_left"></div>
+                                <div class="title_identify_center"></div>
+                                <div class="title_identify_right"><h5><xmp>align-content: flex-end;</xmp></h5></div>
+                            </div>
+                            
+                            <div class="info_container">
+                                <p class="info_p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt eius ex sapiente nam nesciunt. Excepturi error nulla numquam maiores obcaecati repellendus natus eligendi. Voluptas, doloribus.</p>
+                            </div>
+
+                            <div class="padre_sc_aspect_ratio">
+                                <div class="padre_sub_container" id="padre_ac_flex_end">
+                                    <div class="hijo_sub_container">A</div>
+                                    <div class="hijo_sub_container">B</div>
+                                    <div class="hijo_sub_container">C</div>
+                                    <div class="hijo_sub_container">D</div>
+                                    <div class="hijo_sub_container">E</div>
+                                    <div class="hijo_sub_container">F</div>
+                                </div>
+                            </div>
+                            
+                            <div class="code_container">
+                                <div class="left_css_sub_container"></div>
+                                <div class="right_code"><span class="code_css_1-4">    
+                                    <pre>
+<code class="min_code">.padre {
+    display: flex; 
+    align-content: flex-end;
+    flex-wrap: wrap;
+}</code>
+                                    </pre>
+                                </span></div>
+                            </div> 
+                        </div>                        
+
+                        <div class="propiety">
+                            <div class="title_code_container">
+                                <div class="title_identify_left"></div>
+                                <div class="title_identify_center"></div>
+                                <div class="title_identify_right"><h5><xmp>align-content: center;</xmp></h5></div>
+                            </div>
+                            
+                            <div class="info_container">
+                                <p class="info_p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt eius ex sapiente nam nesciunt. Excepturi error nulla numquam maiores obcaecati repellendus natus eligendi. Voluptas, doloribus.</p>
+                            </div>
+
+                            <div class="padre_sc_aspect_ratio">
+                                <div class="padre_sub_container" id="padre_ac_center">
+                                    <div class="hijo_sub_container">A</div>
+                                    <div class="hijo_sub_container">B</div>
+                                    <div class="hijo_sub_container">C</div>
+                                    <div class="hijo_sub_container">D</div>
+                                    <div class="hijo_sub_container">E</div>
+                                    <div class="hijo_sub_container">F</div>
+                                </div>
+                            </div>
+                            
+                            <div class="code_container">
+                                <div class="left_css_sub_container"></div>
+                                <div class="right_code"><span class="code_css_1-4">    
+                                    <pre>
+<code class="min_code">.padre {
+    display: flex; 
+    align-content: center;
+    flex-wrap: wrap;
+}</code>
+                                    </pre>
+                                </span></div>
+                            </div> 
+                        </div>                        
+
+                        <div class="propiety">
+                            <div class="title_code_container">
+                                <div class="title_identify_left"></div>
+                                <div class="title_identify_center"></div>
+                                <div class="title_identify_right"><h5><xmp>align-content: space-between;</xmp></h5></div>
+                            </div>
+                            
+                            <div class="info_container">
+                                <p class="info_p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt eius ex sapiente nam nesciunt. Excepturi error nulla numquam maiores obcaecati repellendus natus eligendi. Voluptas, doloribus.</p>
+                            </div>
+
+                            <div class="padre_sc_aspect_ratio">
+                                <div class="padre_sub_container" id="padre_ac_space_between">
+                                    <div class="hijo_sub_container">A</div>
+                                    <div class="hijo_sub_container">B</div>
+                                    <div class="hijo_sub_container">C</div>
+                                    <div class="hijo_sub_container">D</div>
+                                    <div class="hijo_sub_container">E</div>
+                                    <div class="hijo_sub_container">F</div>
+                                </div>
+                            </div>
+                            
+                            <div class="code_container">
+                                <div class="left_css_sub_container"></div>
+                                <div class="right_code"><span class="code_css_1-4">    
+                                    <pre>
+<code class="min_code">.padre {
+    display: flex; 
+    align-content: space-between;
+    flex-wrap: wrap;
+}</code>
+                                    </pre>
+                                </span></div>
+                            </div> 
+                        </div>
+
+                        <div class="propiety">
+                            <div class="title_code_container">
+                                <div class="title_identify_left"></div>
+                                <div class="title_identify_center"></div>
+                                <div class="title_identify_right"><h5><xmp>align-content: space-around;</xmp></h5></div>
+                            </div>
+                            
+                            <div class="info_container">
+                                <p class="info_p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt eius ex sapiente nam nesciunt. Excepturi error nulla numquam maiores obcaecati repellendus natus eligendi. Voluptas, doloribus.</p>
+                            </div>
+
+                            <div class="padre_sc_aspect_ratio">
+                                <div class="padre_sub_container" id="padre_ac_space_around">
+                                    <div class="hijo_sub_container">A</div>
+                                    <div class="hijo_sub_container">B</div>
+                                    <div class="hijo_sub_container">C</div>
+                                    <div class="hijo_sub_container">D</div>
+                                    <div class="hijo_sub_container">E</div>
+                                    <div class="hijo_sub_container">F</div>
+                                </div>
+                            </div>
+                            
+                            <div class="code_container" id="double_code_container">
+                                <div class="left_css_sub_container"></div>
+                                <div class="right_code"><span class="code_css_1-4">    
+                                    <pre>
+<code>.padre {
+    display: flex; 
+    align-content: space-around;
+    flex-wrap: wrap;
+}</code>
+                                    </pre>
+                                </span></div>
+                            </div> 
+                        </div>
+
+                        <div class="propiety">
+                            <div class="title_code_container">
+                                <div class="title_identify_left"></div>
+                                <div class="title_identify_center"></div>
+                                <div class="title_identify_right"><h5><xmp>align-content: stretch;</xmp></h5></div>
+                            </div>
+                            
+                            <div class="info_container">
+                                <p class="info_p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt eius ex sapiente nam nesciunt. Excepturi error nulla numquam maiores obcaecati repellendus natus eligendi. Voluptas, doloribus.</p>
+                            </div>
+
+                            <div class="padre_sc_aspect_ratio">
+                                <div class="padre_sub_container" id="padre_ac_stretch">
+                                    <div class="hijo_sub_container" id="hijo_sc_stretch">A</div>
+                                    <div class="hijo_sub_container" id="hijo_sc_stretch">B</div>
+                                    <div class="hijo_sub_container" id="hijo_sc_stretch">C</div>
+                                    <div class="hijo_sub_container" id="hijo_sc_stretch">D</div>
+                                    <div class="hijo_sub_container" id="hijo_sc_stretch">E</div>
+                                    <div class="hijo_sub_container" id="hijo_sc_stretch">F</div>
+                                </div>
+                            </div>
+                            
+                            <div class="code_container">
+                                <div class="left_css_sub_container"></div>
+                                <div class="right_code"><span class="code_css_1-4">    
+                                    <pre>
+<code class="min_code">.padre {
+    display: flex; 
+    align-content: stretch;
+    flex-wrap: wrap;
+}
+
+.hijo {
+    height: auto;
+}</code>
+                                    </pre>
+                                </span></div>
+                            </div> 
+                        </div>
+                    </div>
+
+
 
                 </div>
             </section>
